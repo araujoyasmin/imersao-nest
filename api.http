@@ -1,0 +1,14 @@
+GET http://localhost:3000/products
+
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "descricao 1",
+    "price": 100,
+    "image_url": "http://www.google.com"
+}
