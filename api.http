@@ -7,8 +7,41 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "name": "Product 1",
+    "name": "Bolsa",
     "description": "descricao 1",
-    "price": 100,
+    "price": 1000,
     "image_url": "http://www.google.com"
+}
+
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username":"cris",
+    "password":"cris"
+}
+
+###
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzM2MjM0OCwiZXhwIjoxNzA3MzYyNDA4fQ.sEEEqwRhU-cKbAPQLb3KVoRfNHNtTYpl5HSSVUc8h5s
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY3JpcyIsImlhdCI6MTcwNzM2MjczNywiZXhwIjoxNzA3MzYyNzk3fQ.5VH7_7NB3CEreH755MMannfAqMaOEqXJ6JHDKUe9C14
+
+{
+   "items":[
+    {
+        "product_id": "e25f88e1-ceb4-438f-ae96-89c283bb708c",
+        "quantity":2
+    },
+    {
+        "product_id": "948fc21f-c689-4a57-b49e-d22bfb0af9d0",
+        "quantity":1
+    }
+   ],
+   "card_hash": "123"
 }

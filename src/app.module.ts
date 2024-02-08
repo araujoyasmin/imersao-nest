@@ -7,6 +7,8 @@ import { Product } from './products/entities/product.entity';
 import { OrdersModule } from './orders/orders.module';
 import { Order } from './orders/entities/order.entity';
 import { OrderItem } from './orders/entities/order-item.entity';
+import { AuthModule } from './auth/auth.module';
+import { RabbitmqModule } from './rabbitmq/rabbitmq.module';
 
 
 
@@ -24,7 +26,9 @@ import { OrderItem } from './orders/entities/order-item.entity';
       logging:true
     }),
     ProductsModule,
-    OrdersModule],
+    OrdersModule,
+    AuthModule,
+    RabbitmqModule],
   controllers: [AppController],
   providers: [AppService],
 })
